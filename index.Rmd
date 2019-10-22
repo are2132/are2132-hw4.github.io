@@ -23,7 +23,7 @@ Here's me eating a piece of carrot cake
 <img src="media/carrot_cake.jpg" style="width:75%">
 
 
-And here's my all-time favorite vine  
+And here's my all-time favorite vine (view in browser)
 
 <iframe src="https://giphy.com/embed/SsGiwZZmdD19S" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aldc-SsGiwZZmdD19S">via GIPHY</a></p>
 

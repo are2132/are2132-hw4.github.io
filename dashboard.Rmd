@@ -1,0 +1,83 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+``` {r}
+set.seed(1)
+data(instacart)
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Histogram of Number of Items per Order
+
+```{r}
+instacart %>% 
+  group_by(order_id) %>% 
+  mutate(  #add column for number of items in order
+    n_items = n()
+  ) %>% 
+  plot_ly(x = ~n_items, type = "histogram") %>% 
+  layout(
+    title = "Distribution of Number of Items per Order",
+    xaxis = list(title = "# Items"),
+    yaxis = list(title = "Orders")
+  )
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Boxplot of Order Times in Top Departments
+
+```{r}
+top_departments =
+  instacart %>% 
+  count(department, sort = TRUE) %>% 
+  top_n(6)
+  
+inner_join(instacart, top_departments, by = "department") %>%
+  
+  plot_ly(y = ~order_hour_of_day, color = ~department, 
+          type = "box", colors = "Set2") %>% 
+  layout(
+    title = "Order Times for Top 6 Departments",
+    xaxis = list(title = "Department"),
+    yaxis = list(title = "Hour of Day")
+  )
+```
+
+### Barplot of Most Popular Aisles
+
+```{r}
+instacart %>% 
+
+  count(aisle, sort = TRUE, name = "n_items") %>% 
+  filter(n_items > 10000) %>% 
+  
+  plot_ly(x = ~aisle, y = ~n_items,
+          color = ~aisle, type = "bar") %>% 
+  layout(
+     title = "Most Popular ShoppingAisles",
+     xaxis = list(
+       title = "Aisle",
+       categoryorder = "array",
+       categoryarray = ~aisle),
+     yaxis = list(title = "# items")
+)
+```
