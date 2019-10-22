@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "Dashboard - Instacart Data Insights"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -23,27 +23,30 @@ data(instacart)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Histogram of Number of Items per Order
+### Barplot, popular aisles
 
 ```{r}
 instacart %>% 
-  group_by(order_id) %>% 
-  mutate(  #add column for number of items in order
-    n_items = n()
-  ) %>% 
-  plot_ly(x = ~n_items, type = "histogram") %>% 
+  #pick out aisles with more than 15,000 items purchased
+  count(aisle, sort = TRUE, name = "n_items") %>% 
+  filter(n_items > 15000) %>% 
+  
+  plot_ly(x = ~aisle, y = ~n_items,
+          color = ~aisle, type = "bar") %>% 
   layout(
-    title = "Distribution of Number of Items per Order",
-    xaxis = list(title = "# Items"),
-    yaxis = list(title = "Orders")
-  )
-
+     title = "Most Popular Shopping Aisles",
+     xaxis = list(
+       title = "Aisle",
+       categoryorder = "array",
+       categoryarray = ~aisle),
+     yaxis = list(title = "# items")
+     )
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Boxplot of Order Times in Top Departments
+### Boxplot, order times
 
 ```{r}
 #pick out top 6 departments
@@ -64,22 +67,18 @@ inner_join(instacart, top_departments, by = "department") %>%
   )
 ```
 
-### Barplot of Most Popular Aisles
+### Histogram, items per order
 
 ```{r}
 instacart %>% 
-  #pick out aisles with more than 15,000 items purchased
-  count(aisle, sort = TRUE, name = "n_items") %>% 
-  filter(n_items > 15000) %>% 
-  
-  plot_ly(x = ~aisle, y = ~n_items,
-          color = ~aisle, type = "bar") %>% 
+  group_by(order_id) %>% 
+  mutate(  #add column for number of items in order
+    n_items = n()
+  ) %>% 
+  plot_ly(x = ~n_items, type = "histogram") %>% 
   layout(
-     title = "Most Popular ShoppingAisles",
-     xaxis = list(
-       title = "Aisle",
-       categoryorder = "array",
-       categoryarray = ~aisle),
-     yaxis = list(title = "# items")
-)
+    title = "Distribution of Number of Items per Order",
+    xaxis = list(title = "# Items"),
+    yaxis = list(title = "Orders")
+  )
 ```
