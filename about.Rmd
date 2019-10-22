@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "About Alison"
 output: 
   html_document:
     toc: true
@@ -19,7 +19,7 @@ Master’s degree program in Biostatistics
 # Work Experience
 **Co-founder of BusyBox, LLC** May 2018 – May 2019
 
-* Created and launched BusyBox LLC, an online subscription box startup that delivers safe sex supplies + fun and engaging educational materials related to sexual health & wellness, [www.getbusybox.com]
+* Created and launched BusyBox LLC, an online subscription box startup that delivers safe sex supplies + fun and engaging educational materials related to sexual health & wellness, [getbusybox.com](www.getbusybox.com)
 * Helped raise over $25,000 in seed funding, before leaving the company to pursue graduate education
 
 **Researcher, _University of Michigan School of Public Health_** Summer 2018
