@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-Hello and welcome to my website! My name is Alison  
+Hello! My name is Alison Elgass. Welcome to my website  
   
 You can click on the [about page](about.html) to learn more about my experience.
 
@@ -22,9 +22,9 @@ Here's me eating a piece of carrot cake
 
 <img src="media/carrot_cake.jpg" style="width:50%;height:25%">
 
-
+  
 And here's my all-time favorite vine (view in browser)
 
-<iframe src="https://giphy.com/embed/SsGiwZZmdD19S" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aldc-SsGiwZZmdD19S">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/SsGiwZZmdD19S" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aldc-SsGiwZZmdD19S">via GIPHY</a></p>
 
 
