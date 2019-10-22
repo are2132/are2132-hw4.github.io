@@ -1,0 +1,17 @@
+---
+title: "Home Page"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Hello and welcome to my website! My name is Alison  
+  
+You can click on the [about page](about.html) to learn more about my experience.
+
+
+# Some things I like
+This is my favorite [vine](<iframe src="https://giphy.com/embed/SsGiwZZmdD19S" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aldc-SsGiwZZmdD19S">via GIPHY</a></p>)
+
+
