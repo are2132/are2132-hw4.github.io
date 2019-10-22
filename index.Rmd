@@ -15,12 +15,12 @@ You can click on the [about page](about.html) to learn more about my experience.
 
 Here's me with a Shetland pony, Bjorn  
 
-<img src="media/bjorn_pony.jpg" style="width:75%">
+<img src="media/bjorn_pony.jpg" style="width:50%;height:25%">>
 
 
 Here's me eating a piece of carrot cake  
 
-<img src="media/carrot_cake.jpg" style="width:75%">
+<img src="media/carrot_cake.jpg" style="width:50%;height:25%">
 
 
 And here's my all-time favorite vine (view in browser)
