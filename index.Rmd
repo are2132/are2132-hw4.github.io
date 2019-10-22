@@ -11,7 +11,20 @@ Hello and welcome to my website! My name is Alison
 You can click on the [about page](about.html) to learn more about my experience.
 
 
-# Some things I like
-This is my favorite [vine](<iframe src="https://giphy.com/embed/SsGiwZZmdD19S" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aldc-SsGiwZZmdD19S">via GIPHY</a></p>)
+### A few of my favorite things
+
+Here's me with a Shetland pony, Bjorn  
+
+<img src="media/bjorn_pony.jpg" style="width:75%">
+
+
+Here's me eating a piece of carrot cake  
+
+<img src="media/carrot_cake.jpg" style="width:75%">
+
+
+And here's my all-time favorite vine  
+
+<iframe src="https://giphy.com/embed/SsGiwZZmdD19S" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aldc-SsGiwZZmdD19S">via GIPHY</a></p>
 
 
