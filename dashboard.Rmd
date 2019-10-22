@@ -46,11 +46,13 @@ Column {data-width=350}
 ### Boxplot of Order Times in Top Departments
 
 ```{r}
+#pick out top 6 departments
 top_departments =
   instacart %>% 
   count(department, sort = TRUE) %>% 
   top_n(6)
-  
+
+#join this back with original dataset
 inner_join(instacart, top_departments, by = "department") %>%
   
   plot_ly(y = ~order_hour_of_day, color = ~department, 
@@ -66,9 +68,9 @@ inner_join(instacart, top_departments, by = "department") %>%
 
 ```{r}
 instacart %>% 
-
+  #pick out aisles with more than 15,000 items purchased
   count(aisle, sort = TRUE, name = "n_items") %>% 
-  filter(n_items > 10000) %>% 
+  filter(n_items > 15000) %>% 
   
   plot_ly(x = ~aisle, y = ~n_items,
           color = ~aisle, type = "bar") %>% 
